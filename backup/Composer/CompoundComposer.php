@@ -11,7 +11,9 @@ use Composer\IO\BufferIO;
 class CompoundComposer
 {
     private BufferIO $io;
+
     private Config $config;
+
     private Composer $composer;
 
     public function __construct(string $composerProjectPath, array $packages)
@@ -25,11 +27,11 @@ class CompoundComposer
             disableScripts: true,
         );
 
-//        $pool = new Pool();
-//        $pool->addRepository(new CompositeRepository($composer->getRepositoryManager()->getRepositories()));
-//
-//        // Create a solver
-//        $solver = new Solver($pool);
+        //        $pool = new Pool();
+        //        $pool->addRepository(new CompositeRepository($composer->getRepositoryManager()->getRepositories()));
+        //
+        //        // Create a solver
+        //        $solver = new Solver($pool);
 
         $rootPackage = null;
 

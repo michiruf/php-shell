@@ -4,7 +4,7 @@
 require 'src/shell.php';
 
 composerRequire([
-    'rivsen/hello-world'
+    'rivsen/hello-world',
 ]);
 
 $hello = new Rivsen\Demo\Hello();

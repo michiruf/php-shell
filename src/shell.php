@@ -1,7 +1,7 @@
 <?php
 
 $composer = `which composer`;
-if (!$composer) {
+if (! $composer) {
     echo 'Composer needs to be installed on the system for the php shell to work';
     exit(1);
 
@@ -52,8 +52,8 @@ function rrmdir($dir): void
     if (is_dir($dir)) {
         $objects = scandir($dir);
         foreach ($objects as $object) {
-            if ($object != "." && $object != "..") {
-                if (is_dir($dir.DIRECTORY_SEPARATOR.$object) && !is_link($dir."/".$object)) {
+            if ($object != '.' && $object != '..') {
+                if (is_dir($dir.DIRECTORY_SEPARATOR.$object) && ! is_link($dir.'/'.$object)) {
                     rrmdir($dir.DIRECTORY_SEPARATOR.$object);
                 } else {
                     unlink($dir.DIRECTORY_SEPARATOR.$object);

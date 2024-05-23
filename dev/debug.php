@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('dd')) {
+if (! function_exists('dd')) {
     function dd($var): never
     {
         $trace = debug_backtrace();
@@ -11,6 +11,6 @@ if (!function_exists('dd')) {
         echo "// $file:$line\n"; // print the source file:line...
 
         var_dump($var);
-        die();
+        exit();
     }
 }

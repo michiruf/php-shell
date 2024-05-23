@@ -4,7 +4,7 @@
 require 'src/shell.php';
 
 composerRequire([
-    'illuminate/filesystem'
+    'illuminate/filesystem',
 ]);
 
 use Illuminate\Filesystem\Filesystem;
